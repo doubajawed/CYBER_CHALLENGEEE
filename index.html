@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cyber Challenge — Play. Learn. Improve. Prove.">
+<title>Cyber Challenge</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Static build: hide scenario artwork while preserving the existing card layout. */
+.scene{display:none!important}
+.question-card .question,.challenge-card .question{font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.55}
+.choice{font-size:1.06rem;line-height:1.55}
+.feedback-box{font-size:1.04rem;line-height:1.6}
+@media print{
+  @page{size:A4 landscape;margin:0}
+  body{background:#fff!important}
+  body>*{display:none!important}
+  #app{display:block!important}
+  .app-shell{display:block!important}
+  .topbar,.footer,.certificate-header,.cert-actions{display:none!important}
+  .certificate-page{display:flex!important;align-items:center!important;justify-content:center!important;min-height:100vh!important;padding:0!important}
+  .cert-card{width:277mm!important;height:190mm!important;max-width:none!important;box-shadow:none!important;break-inside:avoid!important}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
